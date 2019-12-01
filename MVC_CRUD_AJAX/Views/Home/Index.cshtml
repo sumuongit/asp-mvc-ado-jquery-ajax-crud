@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="container">
+    <h2>Employee Record</h2>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="ClearForm();" >Add New Employee</button>
+    <p></p>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Employee ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>State</th>
+                <th>Country</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">x</button>                
+                <h4 class="modal-title" id="modalTitle">Add Employee</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="lblEmpId">Employee ID</label>
+                        <input type="text" class="form-control" id="employeeId" placeholder="Employee ID" disabled />
+                    </div>
+                    <div class="form-group">
+                        <label for="lblName">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="lblAge">Age</label>
+                        <input type="text" class="form-control" id="age" placeholder="Age" />
+                    </div>
+                    <div class="form-group">
+                        <label for="lbleState">State</label>
+                        <input type="text" class="form-control" id="state" placeholder="State" />
+                    </div>
+                    <div class="form-group">
+                        <label for="lbleCountry">Country</label>
+                        <input type="text" class="form-control" id="country" placeholder="Country" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="btnAdd" onclick="return InsertEmployee();">Add</button>
+                <button type="button" class="btn btn-primary" id="btnUpdate" style="display:none" onclick="return UpdateEmployee();">Update</button>
+                <button type="button" class="btn btn-default" id="btnClose" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
