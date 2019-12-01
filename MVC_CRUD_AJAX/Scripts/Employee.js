@@ -19,7 +19,7 @@ function LoadEmployeeList() {
                 html += '<td>' + item.State + '</td>';
                 html += '<td>' + item.Country + '</td>';
                 html += '<td><a href="#" onclick="return GetEmployeeById(' + item.EmployeeID + ')">Edit</a></td>';
-                html += '<td><a href="#" onclick="DeleteEmployee(' + item.EmployeeID + ')">Delete</a></td>';
+                html += '<td><a href="#" onclick="return DeleteEmployee(' + item.EmployeeID + ')">Delete</a></td>';
                 html += '</tr>';
             });
 
@@ -69,8 +69,7 @@ function GetEmployeeById(empId) {
         type: "GET",
         dataType: "json",
         contentType: "application/json;charset=utf-8",
-        success: function (result) {
-            //alert(result);
+        success: function (result) {            
             $('#employeeId').val(result.EmployeeID);
             $('#name').val(result.Name);
             $('#age').val(result.Age);
@@ -84,9 +83,7 @@ function GetEmployeeById(empId) {
         error: function (errorMessage) {
             alert(errorMessage.responseText);
         }
-    });
-
-    return false;
+    });    
 }
 
 function UpdateEmployee() {
@@ -139,9 +136,7 @@ function DeleteEmployee(empId) {
             error: function (errorMessage) {
                 alert(errorMessage.responseText);
             }
-        });
-
-        return false;
+        });        
     }
 }
 

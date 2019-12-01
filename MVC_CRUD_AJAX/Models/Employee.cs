@@ -12,6 +12,5 @@ namespace MVC_CRUD_AJAX.Models
         public int Age { get; set; }
         public string State { get; set; }
         public string Country { get; set; }
-
     }
 }
