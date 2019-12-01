@@ -1,6 +1,6 @@
 # Exclude the following files or folders from language statistics
 MVC_CRUD_AJAX/Content/* linguist-vendored
-MVC_CRUD_AJAX/Scripts/* linguist-vendored
+MVC_CRUD_AJAX/Scripts/* linguist-vendored=true
 MVC_CRUD_AJAX/Scripts/Employee.js linguist-vendored=true
 
 # Include the following files or folders for language renaming
