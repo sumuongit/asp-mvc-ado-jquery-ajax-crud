@@ -1,0 +1,39 @@
+# Exclude the following files or folders from language statistics
+MVC_CRUD_AJAX/Content/* linguist-vendored
+MVC_CRUD_AJAX/Scripts/* linguist-vendored
+
+# Include the following files or folders for language renaming
+MVC_CRUD_AJAX/Models/* linguist-language=CSHARP
+MVC_CRUD_AJAX/Views/* linguist-language=ASP
+MVC_CRUD_AJAX/Controllers/* linguist-language=CSHARP
+
+# Include the following files or folders for language detection
+*.sql linguist-detectable=true
+
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Custom for Visual Studio
+*.cs     diff=csharp
+*.sln    merge=union
+*.csproj merge=union
+*.vbproj merge=union
+*.fsproj merge=union
+*.dbproj merge=union
+
+# Image files are treated as binary by default
+*.jpg   binary
+*.png   binary
+*.gif   binary
+
+# Standard to msysgit
+*.doc	 diff=astextplain
+*.DOC	 diff=astextplain
+*.docx diff=astextplain
+*.DOCX diff=astextplain
+*.dot  diff=astextplain
+*.DOT  diff=astextplain
+*.pdf  diff=astextplain
+*.PDF	 diff=astextplain
+*.rtf	 diff=astextplain
+*.RTF	 diff=astextplain
